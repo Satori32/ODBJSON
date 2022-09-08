@@ -8,7 +8,7 @@
 #include <map>
 
 
-class JsonDocument {
+class JsonDocument {//ポンコツすぎて辛い。
 public:
 
 	JsonDocument() {}//book cover.
@@ -18,6 +18,10 @@ public:
 
 		Item() { }
 		Item(const std::initializer_list<std::string>& In) : D(In.begin(), In.end()) {}
+
+		std::size_t Size() {
+			return D.size();
+		}
 
 		bool Push(const std::string& In) {
 			D.push_back(In);
